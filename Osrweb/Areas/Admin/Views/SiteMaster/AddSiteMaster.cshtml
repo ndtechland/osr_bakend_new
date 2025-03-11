@@ -1,4 +1,5 @@
-﻿@{
+﻿@model Osr.Domain.Osr.Dto.SiteMasterDTO
+@{
     Layout = "~/Areas/Admin/Views/Shared/Master/_AdminLayout.cshtml";
 }
 
@@ -16,18 +17,18 @@
         <div class="col-12 grid-margin stretch-card">
             <div class="card">
                 <div class="card-body">
-                    <form class="forms-sample">
+                    <form action="/SiteMaster/AddSiteMaster" method="post" enctype="multipart/form-data">
                         <div class="row">
                             <div class="col-md-6">
                                 <div class="form-group">
                                     <label for="siteName">Site Name</label>
-                                    <input type="text" class="form-control"  id="siteName" placeholder="Site Name">
+                                    <input type="text" class="form-control" name="SiteName" id="siteName" placeholder="Site Name" required>
                                 </div>
                             </div>
                             <div class="col-md-6">
                                 <div class="form-group">
                                     <label for="siteAddress">Address</label>
-                                    <textarea class="form-control" id="siteAddress" placeholder="Address"></textarea>
+                                    <textarea class="form-control" id="siteAddress" name="SiteAddress" placeholder="Address" required></textarea>
                                 </div>
                             </div>
 
@@ -36,7 +37,7 @@
                             <div class="col-md-12">
                                 <div class="form-group">
                                     <label for="siteDescription">Site Description</label>
-                                    <textarea class="form-control" rows="15" id="siteDescription" placeholder="Site Description"></textarea>
+                                    <textarea class="form-control" rows="15" id="siteDescription" name="SiteDescription" placeholder="Site Description" required></textarea>
                                 </div>
                             </div>
                         </div>
@@ -45,7 +46,7 @@
                             <div class="col-md-6">
                                 <div class="form-group">
                                     <label for="Size1">Size</label>
-                                    <input type="text" class="form-control" id="Size1" placeholder="Size" onkeydown="validateNumericInput(event)">
+                                    <input type="text" name="TotalArea" class="form-control" id="Size1" placeholder="Size" onkeydown="validateNumericInput(event)">
                                 </div>
                             </div>
                             <div class="col-md-6">
@@ -61,7 +62,7 @@
                             <div class="col-md-6">
                                 <div class="form-group">
                                     <label for="Size2">Size</label>
-                                    <input type="text" class="form-control"  id="Size2" placeholder="Size" onkeydown="validateNumericInput(event)">
+                                    <input type="text" name="Size2" class="form-control" id="Size2" placeholder="Size" onkeydown="validateNumericInput(event)">
                                 </div>
                             </div>
                             <div class="col-md-6">
@@ -77,13 +78,13 @@
                             <div class="col-md-6">
                                 <div class="form-group">
                                     <label for="Size3">Size</label>
-                                    <input type="text" class="form-control" id="Size3" placeholder="Size" onkeydown="validateNumericInput(event)">
+                                    <input type="text" class="form-control" name="Size3" id="Size3" placeholder="Size" onkeydown="validateNumericInput(event)">
                                 </div>
                             </div>
                             <div class="col-md-6">
                                 <div class="form-group">
                                     <label for="NoOfPlots3">No Of Plots</label>
-                                    <input type="text" class="form-control" name="PlotNumber2" id="NoOfPlots3" placeholder="No Of Plots" onkeydown="validateNumericInput(event)">
+                                    <input type="text" class="form-control" name="PlotNumber3" id="NoOfPlots3" placeholder="No Of Plots" onkeydown="validateNumericInput(event)">
                                 </div>
                             </div>
                         </div>
@@ -93,13 +94,13 @@
                             <div class="col-md-6">
                                 <div class="form-group">
                                     <label for="Size4">Size</label>
-                                    <input type="text" class="form-control"  id="Size4" placeholder="Size" onkeydown="validateNumericInput(event)">
+                                    <input type="text" class="form-control" name="Size4" id="Size4" placeholder="Size" onkeydown="validateNumericInput(event)">
                                 </div>
                             </div>
                             <div class="col-md-6">
                                 <div class="form-group">
                                     <label for="NoOfPlots4">No Of Plots</label>
-                                    <input type="text" class="form-control" name="PlotNumber2" id="NoOfPlots4" placeholder="No Of Plots" onkeydown="validateNumericInput(event)">
+                                    <input type="text" class="form-control" name="PlotNumber4" id="NoOfPlots4" placeholder="No Of Plots" onkeydown="validateNumericInput(event)">
                                 </div>
                             </div>
                         </div>
@@ -109,13 +110,13 @@
                             <div class="col-md-6">
                                 <div class="form-group">
                                     <label for="Size5">Size</label>
-                                    <input type="text" class="form-control" id="Size5" placeholder="Size" onkeydown="validateNumericInput(event)">
+                                    <input type="text" class="form-control" name="Size5" id="Size5" placeholder="Size" onkeydown="validateNumericInput(event)">
                                 </div>
                             </div>
                             <div class="col-md-6">
                                 <div class="form-group">
                                     <label for="NoOfPlots5">No Of Plots</label>
-                                    <input type="text" class="form-control" name="PlotNumber2" id="NoOfPlots5" placeholder="No Of Plots" onkeydown="validateNumericInput(event)">
+                                    <input type="text" class="form-control" name="PlotNumber5" id="NoOfPlots5" placeholder="No Of Plots" onkeydown="validateNumericInput(event)">
                                 </div>
                             </div>
                         </div>
@@ -125,13 +126,13 @@
                             <div class="col-md-6">
                                 <div class="form-group">
                                     <label for="Size6">Size</label>
-                                    <input type="text" class="form-control" id="Size6" placeholder="Size" onkeydown="validateNumericInput(event)">
+                                    <input type="text" class="form-control" name="Size6" id="Size6" placeholder="Size" onkeydown="validateNumericInput(event)">
                                 </div>
                             </div>
                             <div class="col-md-6">
                                 <div class="form-group">
                                     <label for="NoOfPlots6">No Of Plots</label>
-                                    <input type="text" class="form-control" name="PlotNumber2" id="NoOfPlots6" placeholder="No Of Plots" onkeydown="validateNumericInput(event)">
+                                    <input type="text" class="form-control" name="PlotNumber6" id="NoOfPlots6" placeholder="No Of Plots" onkeydown="validateNumericInput(event)">
                                 </div>
                             </div>
                         </div>
@@ -141,13 +142,13 @@
                             <div class="col-md-6">
                                 <div class="form-group">
                                     <label for="Size7">Size</label>
-                                    <input type="text" class="form-control" id="Size7" placeholder="Size" onkeydown="validateNumericInput(event)">
+                                    <input type="text" class="form-control" name="Size7" id="Size7" placeholder="Size" onkeydown="validateNumericInput(event)">
                                 </div>
                             </div>
                             <div class="col-md-6">
                                 <div class="form-group">
                                     <label for="NoOfPlots7">No Of Plots</label>
-                                    <input type="text" class="form-control" name="PlotNumber2" id="NoOfPlots7" placeholder="No Of Plots" onkeydown="validateNumericInput(event)">
+                                    <input type="text" class="form-control" name="PlotNumber7" id="NoOfPlots7" placeholder="No Of Plots" onkeydown="validateNumericInput(event)">
                                 </div>
                             </div>
                         </div>
@@ -157,13 +158,13 @@
                             <div class="col-md-6">
                                 <div class="form-group">
                                     <label for="Size8">Size</label>
-                                    <input type="text" class="form-control" id="Size8" placeholder="Size" onkeydown="validateNumericInput(event)">
+                                    <input type="text" class="form-control" name="Size8" id="Size8" placeholder="Size" onkeydown="validateNumericInput(event)">
                                 </div>
                             </div>
                             <div class="col-md-6">
                                 <div class="form-group">
                                     <label for="NoOfPlots8">No Of Plots</label>
-                                    <input type="text" class="form-control" name="PlotNumber2" id="NoOfPlots8" placeholder="No Of Plots" onkeydown="validateNumericInput(event)">
+                                    <input type="text" class="form-control" name="PlotNumber8" id="NoOfPlots8" placeholder="No Of Plots" onkeydown="validateNumericInput(event)">
                                 </div>
                             </div>
                         </div>
@@ -173,13 +174,13 @@
                             <div class="col-md-6">
                                 <div class="form-group">
                                     <label for="Size9">Size</label>
-                                    <input type="text" class="form-control" id="Size9" placeholder="Size" onkeydown="validateNumericInput(event)">
+                                    <input type="text" class="form-control" name="Size9" id="Size9" placeholder="Size" onkeydown="validateNumericInput(event)">
                                 </div>
                             </div>
                             <div class="col-md-6">
                                 <div class="form-group">
                                     <label for="NoOfPlots9">No Of Plots</label> 
-                                    <input type="text" class="form-control" name="PlotNumber2" id="NoOfPlots9" placeholder="No Of Plots" onkeydown="validateNumericInput(event)">
+                                    <input type="text" class="form-control" name="PlotNumber9" id="NoOfPlots9" placeholder="No Of Plots" onkeydown="validateNumericInput(event)">
                                 </div>
                             </div>
                         </div>
@@ -189,36 +190,37 @@
                             <div class="col-md-6">
                                 <div class="form-group">
                                     <label for="Size10">Size</label>
-                                    <input type="text" class="form-control" id="Size10" placeholder="Size" onkeydown="validateNumericInput(event)">
+                                    <input type="text" class="form-control" name="Size10" id="Size10" placeholder="Size" onkeydown="validateNumericInput(event)">
                                 </div>
                             </div>
                             <div class="col-md-6">
                                 <div class="form-group">
                                     <label for="NoOfPlots10">No Of Plots</label>
-                                    <input type="text" class="form-control" name="PlotNumber2" id="NoOfPlots10" placeholder="No Of Plots" onkeydown="validateNumericInput(event)">
+                                    <input type="text" class="form-control" name="PlotNumber10" id="NoOfPlots10" placeholder="No Of Plots" onkeydown="validateNumericInput(event)">
                                 </div>
                             </div>
                         </div>
 
                         <div class="row">
-                            <h5 class="text-warning font-italic">Type 11</h5>
                             <div class="col-md-6">
                                 <div class="form-group">
-                                    <label for="Size11">Size</label>
-                                    <input type="text" class="form-control" id="Size11" placeholder="Size" onkeydown="validateNumericInput(event)">
+                                    <label for="Size11">Shop</label>
+                                    <input type="text" class="form-control" name="ShopSize2" id="Size11" placeholder="Size" onkeydown="validateNumericInput(event)">
                                 </div>
                             </div>
                             <div class="col-md-6">
                                 <div class="form-group">
                                     <label for="NoOfPlots11">No Of Plots</label>
-                                    <input type="text" class="form-control" name="PlotNumber11" id="NoOfPlots11" placeholder="No Of Plots" onkeydown="validateNumericInput(event)">
+                                    <input type="text" class="form-control" name="PlotNumberShop2" id="NoOfPlots11" placeholder="No Of Plots" onkeydown="validateNumericInput(event)">
                                 </div>
                             </div>
                         </div>
 
+                        <button type="submit" class="btn btn-primary">Submit</button>
+                        <a href="/SiteMaster/SiteMasterList" class="btn btn-light">Cancel</a>
 
-                        <button type="submit" class="btn btn-primary me-2">Submit</button>
-                        <button class="btn btn-light">Cancel</button>
+@*                         <button type="submit" class="btn btn-primary me-2">Submit</button>
+ *@                    
                     </form>
                 </div>
             </div>
