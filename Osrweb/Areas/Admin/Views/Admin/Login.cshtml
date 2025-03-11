@@ -1,0 +1,139 @@
+﻿
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Om Shanti Realters  - MLM Based Plots; Plots hi Plots</title>
+    <!-- plugins:css -->
+    <link rel="stylesheet" href="~/assets/vendors/simple-line-icons/css/simple-line-icons.css">
+    <link rel="stylesheet" href="~/assets/vendors/flag-icon-css/css/flag-icons.min.css">
+    <link rel="stylesheet" href="~/assets/vendors/css/vendor.bundle.base.css">
+    <!-- endinject -->
+    <!-- Plugin css for this page -->
+    <!-- End plugin css for this page -->
+    <!-- inject:css -->
+    <!-- endinject -->
+    <!-- Layout styles -->
+    <link rel="stylesheet" href="~/assets/css/vertical-light-layout/style.css">
+    <!-- End layout styles -->
+@*     <link rel="shortcut icon" href="~/assets/images/favicon.png" />
+ *@    <link rel="shortcut icon" href="~/logo/osrlogo.png" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/js/all.min.js"></script>
+
+    <style>
+        .password-container {
+            position: relative;
+            width: 100%;
+        }
+
+            .password-container input {
+                width: 100%;
+                padding-right: 40px; /* Space for the icon */
+                border-radius: 25px; /* Rounded border */
+                padding: 10px;
+                border: 1px solid #ccc;
+                font-size: 16px;
+            }
+
+            .password-container .eye-icon {
+                position: absolute;
+                right: 15px;
+                top: 50%;
+                transform: translateY(-50%);
+                cursor: pointer;
+                font-size: 18px;
+                color: #7b8889;
+                background: none;
+                border: none;
+                outline: none;
+            }
+    </style>
+</head>
+<body>
+    <div class="container-scroller">
+        <div class="container-fluid page-body-wrapper full-page-wrapper">
+            <div class="content-wrapper d-flex align-items-center auth">
+                <div class="row flex-grow">
+                    <div class="col-lg-4 mx-auto">
+                        <div class="auth-form-light text-left p-5">
+                            <div class="brand-logo">
+                                <img src="~/logo/osrlogo.png" style="display: block; margin: 0 auto; width: 150px; height: 100px;" />
+                                @*                                 <img src="~/assets/images/logo-dark.svg">
+ *@                            </div>
+                            <h1 class="" style="text-align:center;">Sign In </h1>
+                            <form class="pt-3" action="/Admin/Login" method="post" autocomplete="off">
+                                <div class="form-group">
+                                    <label>UserName</label>
+                                    <input type="text" name="Username" class="form-control form-control-lg" id="exampleInputEmail1" placeholder="Username">
+                                </div>
+                                <div class="form-group">
+                                    <label>Password</label>
+                                    <div class="password-container">
+                                        <input type="password" name="Password" class="form-control form-control-lg" id="exampleInputPassword1" placeholder="Password">
+                                        <button type="button" class="eye-icon" id="togglePassword">
+                                            <i class="fas fa-eye"></i>
+                                        </button>
+                                    </div>
+                                </div>
+
+                                <div class="mt-3">
+                                    <button class="btn btn-block btn-primary btn-lg font-weight-medium auth-form-btn" type="submit" style="width:505px">SIGN IN</button>
+                               </div>
+                                <div class="my-2 d-flex justify-content-between align-items-center">
+                                    <div class="form-check">
+
+                                    </div>
+                                    <a href="#" class="auth-link text-black">Forgot password?</a>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- content-wrapper ends -->
+        </div>
+        <!-- page-body-wrapper ends -->
+    </div>
+    <!-- container-scroller -->
+    <!-- plugins:js -->
+    <script src="~/assets/vendors/js/vendor.bundle.base.js"></script>
+    <!-- endinject -->
+    <!-- Plugin js for this page -->
+    <!-- End plugin js for this page -->
+    <!-- inject:js -->
+    <script src="~/assets/js/off-canvas.js"></script>
+    <script src="~/assets/js/hoverable-collapse.js"></script>
+    <script src="~/assets/js/misc.js"></script>
+    <script src="~/assets/js/settings.js"></script>
+    <script src="~/assets/js/todolist.js"></script>
+    <!-- endinject -->
+</body>
+</html>
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        var togglePassword = document.getElementById("togglePassword");
+        var passwordField = document.getElementById("exampleInputPassword1");
+
+        if (!togglePassword || !passwordField) {
+            console.error("🔴 Error: Elements not found! Check IDs in HTML.");
+            return;
+        }
+
+        togglePassword.addEventListener("click", function () {
+            var icon = this.querySelector("i");
+            if (passwordField.type === "password") {
+                passwordField.type = "text";
+                icon.classList.remove("fa-eye");
+                icon.classList.add("fa-eye-slash");
+            } else {
+                passwordField.type = "password";
+                icon.classList.remove("fa-eye-slash");
+                icon.classList.add("fa-eye");
+            }
+        });
+
+        console.log("✅ Eye icon script loaded successfully!");
+    });
+</script>

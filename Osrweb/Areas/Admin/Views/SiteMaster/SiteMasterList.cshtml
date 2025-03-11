@@ -1,0 +1,77 @@
+﻿@model IEnumerable<Osr.Domain.Osr.Dto.SiteMasterDTO>
+@{
+    Layout = "~/Areas/Admin/Views/Shared/Master/_AdminLayout.cshtml";
+    var count = 0;
+}
+<style>
+    thead th {
+        background-color: #181824 !important;
+        color: white !important;
+    }
+</style>
+
+
+
+<div class="content-wrapper">
+    <div class="page-header">
+        <h3 class="page-title"> Site Master List</h3>
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="#">Tables</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Basic tables</li>
+            </ol>
+        </nav>
+    </div>
+    <div class="row">
+        <div class="col-lg-12 grid-margin stretch-card">
+            <div class="card">
+                <div class="card-body">
+                    <button type="button" href="/SiteMaster/AddSiteMaster" class="btn btn-dark btn-fw">Add More</button>
+                    <div class="table-responsive">
+                        <table class="table table-hover" id="datatable">
+                            <thead>
+                                <tr>
+                                    <th>Sl. No.</th>
+                                    <th>Site Name</th>
+                                    <th>Site Address</th>
+                                    <th>Site Description</th>
+                                    <th>No Of Plots</th>
+                                    <th>Action</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach (var item in Model)
+                                {
+                                    count++;
+                                    <tr>
+                                        <td>@count</td>
+                                        <td>@item.SiteName</td>
+                                        <td>@item.SiteAddress</td>
+                                        <td>@item.SiteDescription</td>
+                                        <td>@item.NoOfPlots</td>
+                                        <td>
+                                            <button type="button" class="btn btn-dark btn-icon-text">
+                                                Edit <i class="icon-doc btn-icon-append"></i>
+                                            </button>
+                                            <button class="btn btn-danger">AllPlots</button>
+                                            <button class="btn btn-info">AddRates</button>
+                                        </td>
+
+                                    </tr>
+
+                                }
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(document).ready(function () {
+        $('#datatable').DataTable(); 
+    });
+</script>
+

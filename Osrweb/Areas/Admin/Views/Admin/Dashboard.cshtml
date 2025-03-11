@@ -1,0 +1,124 @@
+﻿@{
+    Layout = "~/Areas/Admin/Views/Shared/Master/_AdminLayout.cshtml";
+}
+@using System.Security.Claims
+@{
+    var userId = User.FindFirstValue(ClaimTypes.NameIdentifier);
+    var customerName = User.Claims.FirstOrDefault(c => c.Type == "CustomerName")?.Value;
+}
+<div class="content-wrapper">
+    <div style="width:55%;margin:auto;margin-top:4%">
+        <h1>Welcome</h1>
+        @if (User.IsInRole("admin"))
+        {
+            <div class="row">
+                <div class="col-md-12" style="height:500px;width:80%;border:1px solid grey">
+                    @if (string.IsNullOrEmpty(Model.ImageName))
+                    {
+                        <span style="text-align:center">Not availabe</span>
+                    }
+                    else
+                    {
+                        <img src="/Images/@Model.ImageName" style="width:100%;height:100%" alt="profile pic" />
+                    }
+                </div>
+            </div>
+            if (TempData["imgMessage"] != null)
+            {
+                <div class="row">
+                    <div class="col-md-6">
+                        <span class="text-danger">@TempData["imgMessage"]</span>
+                    </div>
+                </div>
+            }
+            <br />
+            <form method="post" action="/Admin/Dashboard"  enctype="multipart/form-data" autocomplete="off">
+                <div class="row">
+                    <div class="col-md-6">
+                        <input type="file" name="file" />
+                    </div>
+                    <div class="col-md-6">
+                        <input type="submit" value="Change" />
+                    </div>
+                </div>
+            </form>
+            <br />
+            <div class="form-group col-sm">
+                <div class="row mb-3">
+                    <div class="col-md-6">
+                        <b>Total Plot Sale</b>
+                    </div>
+                    <div class="col-md-6">
+                        <b>@Model.TotalPlotSale</b>
+                    </div>
+                </div>
+
+                <div class="row mb-3">
+                    <div class="col-md-6">
+                        <b>Total Payment Received</b>
+                    </div>
+                    <div class="col-md-6">
+                        <b>Rs. @Model.TotalPaymentRecieved</b>
+                    </div>
+                </div>
+
+                <div class="row mb-3">
+                    <div class="col-md-6">
+                        <b>Total Sent SMS</b>
+                    </div>
+                    <div class="col-md-6">
+                        <b>@Model.TotalTransactions</b>
+                    </div>
+                </div>
+
+                <div class="row mb-3">
+                    <div class="col-md-6">
+                        <b>Received Balance this Month</b>
+                    </div>
+                    <div class="col-md-6">
+                        <b>Rs. @Model.MonthlyPaidEmi</b>
+                    </div>
+                </div>
+
+                <div class="row mb-3">
+                    <div class="col-md-6">
+                        <b>Pending Balance this Month</b>
+                    </div>
+                    <div class="col-md-6">
+                        <b>Rs. @Model.MonthlyPendingEmi</b>
+                    </div>
+                </div>
+
+                <div class="row mb-3">
+                    <div class="col-md-6">
+                        <b>Total Active Users</b>
+                    </div>
+                    <div class="col-md-6">
+                        <b>@Model.TotalActiveUser</b>
+                    </div>
+                </div>
+
+                <div class="row mb-3">
+                    <div class="col-md-6">
+                        <b>Total Inactive Users</b>
+                    </div>
+                    <div class="col-md-6">
+                        <b>@Model.TotalInactiveUser</b>
+                    </div>
+                </div>
+
+                <div class="row mb-3">
+                    <div class="col-md-6">
+                        <b>Total Hold Users</b>
+                    </div>
+                    <div class="col-md-6">
+                        <b>@Model.TotalHoldUser</b>
+                    </div>
+                </div>
+            </div>
+
+          
+        }
+    </div>
+</div>
+

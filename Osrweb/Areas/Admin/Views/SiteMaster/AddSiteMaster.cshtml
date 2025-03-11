@@ -1,0 +1,252 @@
+﻿@{
+    Layout = "~/Areas/Admin/Views/Shared/Master/_AdminLayout.cshtml";
+}
+
+<div class="content-wrapper">
+    <div class="page-header">
+        <h3 class="page-title"> Add Site Master </h3>
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+                @* <li class="breadcrumb-item"><a href="#">Forms</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Form elements</li> *@
+            </ol>
+        </nav>
+    </div>
+    <div class="row">
+        <div class="col-12 grid-margin stretch-card">
+            <div class="card">
+                <div class="card-body">
+                    <form class="forms-sample">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="siteName">Site Name</label>
+                                    <input type="text" class="form-control"  id="siteName" placeholder="Site Name">
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="siteAddress">Address</label>
+                                    <textarea class="form-control" id="siteAddress" placeholder="Address"></textarea>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="form-group">
+                                    <label for="siteDescription">Site Description</label>
+                                    <textarea class="form-control" rows="15" id="siteDescription" placeholder="Site Description"></textarea>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <h5 class="text-warning font-italic">Type 1</h5>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="Size1">Size</label>
+                                    <input type="text" class="form-control" id="Size1" placeholder="Size" onkeydown="validateNumericInput(event)">
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="NoOfPlots1">No Of Plots</label>
+                                    <input type="text" name="NoOfPlots" class="form-control" id="NoOfPlots1" placeholder="No Of Plots" onkeydown="validateNumericInput(event)">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <h5 class="text-warning font-italic">Type 2</h5>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="Size2">Size</label>
+                                    <input type="text" class="form-control"  id="Size2" placeholder="Size" onkeydown="validateNumericInput(event)">
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="NoOfPlots2">No Of Plots</label>
+                                    <input type="text" class="form-control" name="PlotNumber2" id="NoOfPlots2" placeholder="No Of Plots" onkeydown="validateNumericInput(event)">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <h5 class="text-warning font-italic">Type 3</h5>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="Size3">Size</label>
+                                    <input type="text" class="form-control" id="Size3" placeholder="Size" onkeydown="validateNumericInput(event)">
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="NoOfPlots3">No Of Plots</label>
+                                    <input type="text" class="form-control" name="PlotNumber2" id="NoOfPlots3" placeholder="No Of Plots" onkeydown="validateNumericInput(event)">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <h5 class="text-warning font-italic">Type 4</h5>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="Size4">Size</label>
+                                    <input type="text" class="form-control"  id="Size4" placeholder="Size" onkeydown="validateNumericInput(event)">
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="NoOfPlots4">No Of Plots</label>
+                                    <input type="text" class="form-control" name="PlotNumber2" id="NoOfPlots4" placeholder="No Of Plots" onkeydown="validateNumericInput(event)">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <h5 class="text-warning font-italic">Type 5</h5>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="Size5">Size</label>
+                                    <input type="text" class="form-control" id="Size5" placeholder="Size" onkeydown="validateNumericInput(event)">
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="NoOfPlots5">No Of Plots</label>
+                                    <input type="text" class="form-control" name="PlotNumber2" id="NoOfPlots5" placeholder="No Of Plots" onkeydown="validateNumericInput(event)">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <h5 class="text-warning font-italic">Type 6</h5>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="Size6">Size</label>
+                                    <input type="text" class="form-control" id="Size6" placeholder="Size" onkeydown="validateNumericInput(event)">
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="NoOfPlots6">No Of Plots</label>
+                                    <input type="text" class="form-control" name="PlotNumber2" id="NoOfPlots6" placeholder="No Of Plots" onkeydown="validateNumericInput(event)">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <h5 class="text-warning font-italic">Type 7</h5>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="Size7">Size</label>
+                                    <input type="text" class="form-control" id="Size7" placeholder="Size" onkeydown="validateNumericInput(event)">
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="NoOfPlots7">No Of Plots</label>
+                                    <input type="text" class="form-control" name="PlotNumber2" id="NoOfPlots7" placeholder="No Of Plots" onkeydown="validateNumericInput(event)">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <h5 class="text-warning font-italic">Type 8</h5>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="Size8">Size</label>
+                                    <input type="text" class="form-control" id="Size8" placeholder="Size" onkeydown="validateNumericInput(event)">
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="NoOfPlots8">No Of Plots</label>
+                                    <input type="text" class="form-control" name="PlotNumber2" id="NoOfPlots8" placeholder="No Of Plots" onkeydown="validateNumericInput(event)">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <h5 class="text-warning font-italic">Type 9</h5>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="Size9">Size</label>
+                                    <input type="text" class="form-control" id="Size9" placeholder="Size" onkeydown="validateNumericInput(event)">
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="NoOfPlots9">No Of Plots</label> 
+                                    <input type="text" class="form-control" name="PlotNumber2" id="NoOfPlots9" placeholder="No Of Plots" onkeydown="validateNumericInput(event)">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <h5 class="text-warning font-italic">Type 10</h5>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="Size10">Size</label>
+                                    <input type="text" class="form-control" id="Size10" placeholder="Size" onkeydown="validateNumericInput(event)">
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="NoOfPlots10">No Of Plots</label>
+                                    <input type="text" class="form-control" name="PlotNumber2" id="NoOfPlots10" placeholder="No Of Plots" onkeydown="validateNumericInput(event)">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <h5 class="text-warning font-italic">Type 11</h5>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="Size11">Size</label>
+                                    <input type="text" class="form-control" id="Size11" placeholder="Size" onkeydown="validateNumericInput(event)">
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="NoOfPlots11">No Of Plots</label>
+                                    <input type="text" class="form-control" name="PlotNumber11" id="NoOfPlots11" placeholder="No Of Plots" onkeydown="validateNumericInput(event)">
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <button type="submit" class="btn btn-primary me-2">Submit</button>
+                        <button class="btn btn-light">Cancel</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    function validateNumericInput(event) {
+        if ([67, 86, 88].includes(event.keyCode) && (event.ctrlKey || event.metaKey) ||
+            [32, 46, 8, 9, 27, 13].includes(event.keyCode) ||
+            (event.keyCode >= 35 && event.keyCode <= 39)) return;
+
+        if ((event.keyCode >= 48 && event.keyCode <= 57) || (event.keyCode >= 96 && event.keyCode <= 105)) return;
+        event.preventDefault();
+    }
+</script>
+<script>
+    $("#NoOfPlots").keyup(function () {
+        var noOfPlots = $(this).val();
+        if (noOfPlots.length < 1)
+            return;
+        noOfPots = parseInt(noOfPlots);
+        var rows = "";
+        var total = "20";
+        for (var i = 0; i < noOfPlots; i++) {
+            var row = `<tr>
+                                <td>${i + 1}</td>   <td><input type="text" id="total" name="SiteNames[${i}]" class ="form-control"/></td>                           </tr>`;
+            rows = rows + row;
+        }
+        $("#tblPlot tbody").html(rows);
+    });
+</script>
